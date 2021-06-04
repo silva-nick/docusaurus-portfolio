@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // Basis
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6", "DOM"],
+    // JS / React
+    "allowJs": true,
+    "jsx": "react",
+    // Declaration
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    // Config
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    // Libs
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "types": ["node", "@docusaurus/module-type-aliases"],
+    // IO
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
+}
