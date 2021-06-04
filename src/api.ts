@@ -1,6 +1,6 @@
-import fetch from "node-fetch";
+import fetch from 'node-fetch';
 
-import { repoOptions } from "./types";
+import { repoOptions } from './types';
 
 // Load a single user using:
 // https://developer.github.com/v3/users/#get-a-single-user
@@ -15,7 +15,7 @@ export async function getUser(username: string) {
     })
     .then((json) => (userData = json))
     .catch(function (error) {
-      console.log("Error in getUser \n", error);
+      console.log('Error in getUser \n', error);
     });
   return userData;
 }
@@ -28,24 +28,24 @@ export async function getRepos(username: string, options: repoOptions) {
   let otherSort: string | null;
 
   let { type, sort, direction, numRepos } = options;
-  type = type || "owner";
-  sort = sort || "full_name";
-  direction = direction || "desc";
+  type = type || 'owner';
+  sort = sort || 'full_name';
+  direction = direction || 'desc';
   numRepos = numRepos || 6;
   let tempNumRepos = numRepos;
 
-  if (["created", "updated", "pushed", "full_name"].indexOf(sort) < 0) {
+  if (['created', 'updated', 'pushed', 'full_name'].indexOf(sort) < 0) {
     if (
-      ["size", "stargazers_count", "watchers_count", "forks_count"].indexOf(
-        sort
+      ['size', 'stargazers_count', 'watchers_count', 'forks_count'].indexOf(
+        sort,
       ) < 0
     ) {
       throw new Error(
-        "Given sort option isn't a github repo parameter\n Check https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user"
+        "Given sort option isn't a github repo parameter\n Check https://docs.github.com/en/rest/reference/repos#list-repositories-for-a-user",
       );
     }
     otherSort = sort;
-    sort = "created";
+    sort = 'created';
   }
 
   while (numRepos > 0) {
