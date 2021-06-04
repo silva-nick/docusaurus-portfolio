@@ -5,19 +5,15 @@ import { repoOptions } from './types';
 // Load a single user using:
 // https://developer.github.com/v3/users/#get-a-single-user
 export async function getUser(username: string) {
-  let userData;
-  fetch(`https://api.github.com/users/${username}`)
-    .then((res: any) => {
-      if (!res.ok) {
-        throw Error(res.statusText);
-      }
-      return res.json();
-    })
-    .then((json: any) => (userData = json))
-    .catch(function (error: any) {
-      console.log('Error in getUser \n', error);
-    });
-  return userData;
+  try {
+    let res = await fetch(`https://api.github.com/users/${username}`);
+    if (!res.ok) {
+      throw Error(res.statusText);
+    }
+    return await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 // Load a user's repos:
@@ -49,28 +45,40 @@ export async function getRepos(username: string, options: repoOptions) {
 
     otherSort = sort;
     sort = 'created';
+    tempNumRepos = 500;
   }
 
   let tempRepos: any[] = [];
-  while (numRepos > 0 && (!tempRepos || tempRepos.length === 100)) {
+  while (tempNumRepos > 0 && (!tempRepos.length || tempRepos.length === 100)) {
     const perPage = numRepos < 100 ? numRepos : 100;
     const url = `https://api.github.com/users/${username}/repos?type=${type}&sort=${sort}&direction=${direction}&per_page=${perPage}&page=${page}`;
-    fetch(url)
-      .then((res: any) => {
-        if (!res.ok) {
-          throw Error(res.statusText);
-        }
-        console.log(res);
-        tempRepos = res;
-      })
-      .catch(function (error: any) {
-        console.log('Error in getUser \n', error);
-      });
+
+    try {
+      let res = await fetch(url);
+      if (!res.ok) {
+        throw Error(res.statusText);
+      }
+      tempRepos = await res.json();
+    } catch (error) {
+      console.log(error);
+    }
     repos = tempRepos.concat(repos);
+
+    tempNumRepos -= perPage;
+    page++;
   }
 
   if (otherSort) {
-    //sort and slice repos
+    repos = repos
+      .sort((a, b) => {
+        if (direction === 'asc') {
+          return a[otherSort!] - b[otherSort!];
+        } else {
+          return b[otherSort!] - a[otherSort!];
+        }
+      })
+      .slice(0, Math.min(numRepos, repos.length));
   }
+
   return repos;
 }
