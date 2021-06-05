@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-import { repoOptions } from './types';
+import { RepoOptions } from './types';
 
 // Load a single user using:
 // https://developer.github.com/v3/users/#get-a-single-user
@@ -18,7 +18,7 @@ export async function getUser(username: string) {
 
 // Load a user's repos:
 // https://docs.github.com/en/rest/reference/repos#list-user-repositories
-export async function getRepos(username: string, options: repoOptions) {
+export async function getRepos(username: string, options: RepoOptions) {
   let repos: any[] = [];
   let page = 1;
   let otherSort: string | null = null;

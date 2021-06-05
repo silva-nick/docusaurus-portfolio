@@ -1,0 +1,18 @@
+{
+  "name": "docusaurus-portfolio-theme",
+  "version": "1.0.0",
+  "repository": "https://github.com/silva-nick/docusaurus-portfolio.git",
+  "author": "silva-nick <silva.d.nicholas@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

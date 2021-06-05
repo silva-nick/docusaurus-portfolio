@@ -1,12 +1,21 @@
+// Plugin options type
+export interface PluginOptions {
+  path: string;
+  //id: string; // TODO: support multiple instances
+  username: string;
+  userOptions?: UserOptions;
+  repoOptions?: RepoOptions;
+}
+
 // Other personal user data
-export interface userOptions {
-  fullName: string;
-  links: string[];
+export interface UserOptions {
+  fullName?: string;
+  links?: string[];
   // TODO: bio, override github user data
 }
 
 // github repo api params
-export interface repoOptions {
+export interface RepoOptions {
   type?: string;
   sort?: string;
   direction?: string;
@@ -14,7 +23,7 @@ export interface repoOptions {
 }
 
 // github repo response values
-export interface repoData {
+export interface RepoData {
   name: string;
   description: string;
   html_url: string;
