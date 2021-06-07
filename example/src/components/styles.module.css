@@ -1,0 +1,10 @@
+.tHolder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.trophy {
+  flex: 1;
+  padding: 0.2rem;
+}

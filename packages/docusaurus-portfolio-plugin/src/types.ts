@@ -14,6 +14,20 @@ export interface UserOptions {
   // TODO: bio, override github user data
 }
 
+// github user data
+export interface UserData {
+  username: string;
+  fullName?: string;
+  links?: string[];
+  avatar_url: string;
+  html_url: string;
+  bio: string;
+  hireable: boolean | null;
+  company: string | null;
+  location: string | null;
+  created_at: string;
+}
+
 // github repo api params
 export interface RepoOptions {
   type?: string;

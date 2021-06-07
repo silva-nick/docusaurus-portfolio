@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import React, { Children } from 'react';
-import styles from './index.module.css';
+import React from 'react';
+import styles from './styles.module.css';
 
 /*
 const exampleProps = {

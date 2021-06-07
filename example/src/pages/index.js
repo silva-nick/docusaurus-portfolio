@@ -5,9 +5,24 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import { UserCard } from '../components/index';
+
+// TEM<P
+let userData = {
+  username: 'silva-nick',
+  fullName: 'Nick Silva',
+  links: ['google.com', 'linkedin.com'],
+  avatar_url: 'https://avatars.githubusercontent.com/u/39960606?v=4',
+  html_url: 'https://github.com/silva-nick',
+  company: "google",
+  location: "nowhere",
+  hireable: "yes",
+  bio: 'Sophomore CS Student.',
+  created_at: '2018-06-05T15:17:27Z',
+};
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -26,7 +41,7 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
@@ -35,6 +50,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
+      <UserCard {...userData} />
     </Layout>
   );
 }
