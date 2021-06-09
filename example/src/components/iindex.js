@@ -1,53 +1,16 @@
-import clsx from 'clsx';
-import React, {useState} from 'react';
+import React, { useState, useRef } from 'react';
 import Overlay from 'react-overlays/Overlay';
 
 import styles from './sstyles.module.css';
 
-const Tooltip = styled('div')`
-  position: absolute;
-`;
-
-const Arrow = styled('div')`
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  z-index: -1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    transform: rotate(45deg);
-    background: #000;
-    width: 10px;
-    height: 10px;
-    top: 0;
-    left: 0;
-  }
-
- "bottom: -4px;",
-`;
-
-const Body = styled('div')`
-  padding: 3px 8px;
-  color: #fff;
-  text-align: center;
-  border-radius: 3px;
-  background-color: #000;
-`;
-
-const initialSstate = {
-  show: false,
-};
-
-
-export function TropyOverlay() {
+export function TrophyOverlay() {
   const [show, setShow] = useState(false);
   const triggerRef = useRef(null);
   const containerRef = useRef(null);
+  const placement = 'top';
 
-  const handleClick = () => 
-    setShow(!show)
+  const handleClick = () => {
+    setShow(!show);
   };
 
   return (
@@ -60,7 +23,6 @@ export function TropyOverlay() {
         onClick={handleClick}>
         I am an Overlay target
       </button>
-      <p>Keep clicking to see the placement change.</p>
 
       <Overlay
         show={show}
@@ -71,16 +33,17 @@ export function TropyOverlay() {
         container={containerRef}
         target={triggerRef}>
         {({ props, arrowProps, placement }) => (
-          <Tooltip {...props} placement={placement}>
-            <Arrow
+          <div className={styles.Overlay} {...props} placement={placement}>
+            <div
+              className={styles.overlayArrow}
               {...arrowProps}
               placement={placement}
               style={arrowProps.style}
             />
-            <Body>
+            <div className={styles.overlayBody}>
               I&rsquo;m placed to the <strong>{placement}</strong>
-            </Body>
-          </Tooltip>
+            </div>
+          </div>
         )}
       </Overlay>
     </div>
