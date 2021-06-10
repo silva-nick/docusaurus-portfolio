@@ -7,21 +7,22 @@ export function TrophyOverlay() {
   const [show, setShow] = useState(false);
   const triggerRef = useRef(null);
   const containerRef = useRef(null);
-  const placement = 'top';
 
   const handleClick = () => {
     setShow(!show);
   };
 
   return (
-    <div className="flex flex-col items-center" ref={containerRef}>
+    <div
+      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      ref={containerRef}>
       <button
         type="button"
         className="btn mb-4"
         id="overlay-toggle"
         ref={triggerRef}
         onClick={handleClick}>
-        I am an Overlay target
+        Example button
       </button>
 
       <Overlay
@@ -29,7 +30,7 @@ export function TrophyOverlay() {
         rootClose
         offset={[0, 10]}
         onHide={() => setShow(false)}
-        placement={placement}
+        placement={'top'}
         container={containerRef}
         target={triggerRef}>
         {({ props, arrowProps, placement }) => (
@@ -40,9 +41,7 @@ export function TrophyOverlay() {
               placement={placement}
               style={arrowProps.style}
             />
-            <div className={styles.overlayBody}>
-              I&rsquo;m placed to the <strong>{placement}</strong>
-            </div>
+            <div className={styles.overlayBody}>{console.log(arrowProps)}</div>
           </div>
         )}
       </Overlay>
