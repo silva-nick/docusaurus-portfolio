@@ -66,7 +66,6 @@ export function UserCard(props) {
           )}
         </div>
         <small>{bio}</small>
-        <hr />
         <div className={styles.tHolder}>
           {company && <div className={styles.trophy}>🏭</div>}
           {location && <div className={styles.trophy}>🏦</div>}

@@ -10,11 +10,11 @@
   bottom: -4px;
 }
 
-.overlayArrow ::before {
+.overlayArrow::before {
   content: '';
   position: absolute;
   transform: rotate(45deg);
-  background: #000;
+  background: var(--ifm-color-primary-dark);
   width: 10px;
   height: 10px;
   top: 0;
@@ -26,5 +26,5 @@
   color: #fff;
   text-align: center;
   border-radius: 3px;
-  background-color: #000;
+  background-color: var(--ifm-color-primary-dark);
 }

@@ -16,12 +16,7 @@ export function TrophyOverlay() {
     <div
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       ref={containerRef}>
-      <button
-        type="button"
-        className="btn mb-4"
-        id="overlay-toggle"
-        ref={triggerRef}
-        onClick={handleClick}>
+      <button ref={triggerRef} onClick={handleClick}>
         Example button
       </button>
 
@@ -32,16 +27,16 @@ export function TrophyOverlay() {
         onHide={() => setShow(false)}
         placement={'top'}
         container={containerRef}
-        target={triggerRef}>
+        target={triggerRef.current}>
         {({ props, arrowProps, placement }) => (
-          <div className={styles.Overlay} {...props} placement={placement}>
+          <div className={styles.Overlay} {...props}>
             <div
               className={styles.overlayArrow}
               {...arrowProps}
               placement={placement}
-              style={arrowProps.style}
+              style={{ ...arrowProps.style }}
             />
-            <div className={styles.overlayBody}>{console.log(arrowProps)}</div>
+            <div className={styles.overlayBody}>{'lets go'}</div>
           </div>
         )}
       </Overlay>
