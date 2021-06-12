@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 
 import styles from './styles.module.css';
-import { TrophyOverlay } from '../TrophyOverlay';
+import TrophyOverlay from '@theme/TrophyOverlay';
 
 /*
 let userData = {
@@ -11,16 +11,15 @@ let userData = {
   links: ['google.com', 'linkedin.com'],
   avatar_url: 'https://avatars.githubusercontent.com/u/39960606?v=4',
   html_url: 'https://github.com/silva-nick',
-  company: null,
-  location: null,
-  email: null,
-  hireable: null,
+  company: 'google',
+  location: 'nowhere',
+  hireable: 'yes',
   bio: 'Sophomore CS Student.',
   created_at: '2018-06-05T15:17:27Z',
 };
 */
 
-export function UserCard(props) {
+export default function UserCard(props) {
   const {
     username,
     fullName,

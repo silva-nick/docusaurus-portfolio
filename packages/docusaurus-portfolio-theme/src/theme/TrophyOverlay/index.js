@@ -3,7 +3,7 @@ import Overlay from 'react-overlays/Overlay';
 
 import styles from './styles.module.css';
 
-export function TrophyOverlay(props) {
+export default function TrophyOverlay(props) {
   const [show, setShow] = useState(false);
   const triggerRef = useRef(null);
   const containerRef = useRef(null);

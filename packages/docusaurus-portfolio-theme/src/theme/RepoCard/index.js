@@ -14,7 +14,7 @@ const exampleProps = {
 };
 */
 
-export function RepoCard(props) {
+export default function RepoCard(props) {
   const {
     name,
     repoUrl,

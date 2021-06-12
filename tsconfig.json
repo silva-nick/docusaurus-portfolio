@@ -5,6 +5,7 @@
     "module": "commonjs",
     "lib": ["ESNext", "DOM"],
     // JS / React
+    "noEmit": true,
     "allowJs": true,
     "jsx": "react",
     // Declaration

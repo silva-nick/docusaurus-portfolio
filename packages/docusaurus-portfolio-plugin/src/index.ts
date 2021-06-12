@@ -1,11 +1,11 @@
 import { LoadContext, OptionValidationContext } from '@docusaurus/types';
 import { getPluginI18nPath } from '@docusaurus/utils';
 import { ContentPaths } from '@docusaurus/utils/lib/markdownLinks';
+import { PluginOptions, UserOptions, RepoOptions, RepoData } from './types';
 
 import path from 'path';
 
 import { getUser, getRepos } from './api';
-import { PluginOptions, UserOptions, RepoOptions, RepoData } from './types';
 
 export function validateOptions({
   options,
@@ -38,10 +38,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
     }),
   };
 
-  const dataDir = path.join(
-    generatedFilesDir,
-    'docusaurus-portfolio',
-  );
+  const dataDir = path.join(generatedFilesDir, 'docusaurus-portfolio');
 
   return {
     name: 'docusaurus-portfolio',
