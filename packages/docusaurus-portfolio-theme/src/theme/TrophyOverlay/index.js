@@ -1,31 +1,44 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Overlay from 'react-overlays/Overlay';
 
-import styles from './sstyles.module.css';
+import styles from './styles.module.css';
 
-export function TrophyOverlay() {
+export function TrophyOverlay(props) {
   const [show, setShow] = useState(false);
   const triggerRef = useRef(null);
   const containerRef = useRef(null);
+
+  const { desc, icon } = props;
 
   const handleClick = () => {
     setShow(!show);
   };
 
+  useEffect(() => {
+    triggerRef.current.addEventListener('mouseenter', (e) => {
+      setShow(true);
+    });
+
+    triggerRef.current.addEventListener('mouseleave', (e) => {
+      setShow(false);
+    });
+  });
+
   return (
     <div
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       ref={containerRef}>
-      <button ref={triggerRef} onClick={handleClick}>
-        Example button
-      </button>
+      <div ref={triggerRef} onClick={handleClick}>
+        {icon}
+      </div>
 
       <Overlay
         show={show}
         rootClose
         offset={[0, 10]}
         onHide={() => setShow(false)}
-        placement={'top'}
+        onEnter={() => setShow(true)}
+        placement={'bottom'}
         container={containerRef}
         target={triggerRef.current}>
         {({ props, arrowProps, placement }) => (
@@ -36,7 +49,7 @@ export function TrophyOverlay() {
               placement={placement}
               style={{ ...arrowProps.style }}
             />
-            <div className={styles.overlayBody}>{'lets go'}</div>
+            <div className={styles.overlayBody}>{desc}</div>
           </div>
         )}
       </Overlay>
