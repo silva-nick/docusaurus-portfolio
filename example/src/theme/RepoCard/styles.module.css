@@ -1,0 +1,14 @@
+.bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  }
+
+.bottomIcon {
+  flex: 1;
+  display: block;
+}
+
+.bottomSpace {
+  flex: 4;
+}

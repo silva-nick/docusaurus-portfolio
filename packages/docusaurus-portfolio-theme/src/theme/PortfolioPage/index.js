@@ -1,5 +1,6 @@
 import React, { userState } from 'react';
-import Layour from '@theme/Layout';
+import clsx from 'clsx';
+import Layout from '@theme/Layout';
 
 import RepoCard from '@theme/RepoCard';
 import UserCard from '@theme/UserCard';
@@ -15,13 +16,13 @@ export default function PortfolioPage(props) {
     for (let index in repoCards) {
       if (index == repoCards.length - 1) {
         grid.push(
-          <div className={'row'}>
+          <div className={'row'} key={index}>
             <div className={'col--6'}>{repoCards[index]}</div>
           </div>,
         );
       } else {
         grid.push(
-          <div className={'row'}>
+          <div className={'row'} key={index}>
             <div className={'col'}>{repoCards[index]}</div>
             <div className={'col'}>{repoCards[++index]}</div>
           </div>,
@@ -33,10 +34,13 @@ export default function PortfolioPage(props) {
 
   return (
     <Layout title={pageProps.title} description={pageProps.description}>
-      <div className={'userHolder'}>
+      <div className={styles.userHolder}>
         <UserCard {...userProps} />
       </div>
-      <div className={'repoHolder container'}>{makeGrid(repoProps)}</div>
+      <div className={clsx(styles.repoHolder, 'container')}>
+        <ContentFrame />
+        {makeGrid(repoProps)}
+      </div>
     </Layout>
   );
 }

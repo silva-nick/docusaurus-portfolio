@@ -1,0 +1,30 @@
+.overlay {
+  position: absolute;
+}
+
+.overlayArrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+  top: -4px;
+}
+
+.overlayArrow::before {
+  content: '';
+  position: absolute;
+  transform: rotate(45deg);
+  background: var(--ifm-color-primary-dark);
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+}
+
+.overlayBody {
+  padding: 3px 8px;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  background-color: var(--ifm-color-primary-dark);
+}
