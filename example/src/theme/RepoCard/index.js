@@ -25,7 +25,10 @@ export default function RepoCard(props) {
   } = props;
 
   return (
-    <div className={'card card--full-height'}>
+    <div className={clsx('card card--full-height', styles.cardDirect)}>
+      <a
+        className={styles.cardLink}
+        href={repoUrl}/>
       <div className={'card__header'}>
         <h3>{name}</h3>
       </div>
