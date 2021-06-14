@@ -25,26 +25,27 @@ export default function RepoCard(props) {
   } = props;
 
   return (
-    <div className={'col col--6 margin-bottom--lg'}>
-      <div className={'card card--full-height'}>
-        <div className={'card__header'}>
-          <h3>{name}</h3>
+    <div className={clsx('card card--full-height', styles.cardDirect)}>
+      <a
+        className={styles.cardLink}
+        href={repoUrl}/>
+      <div className={'card__header'}>
+        <h3>{name}</h3>
+      </div>
+      <div className={'card__body'}>
+        <p>{description}</p>
+      </div>
+      <div className={clsx('card__footer', styles.bottom)}>
+        <div className={styles.bottomIcon}>
+          <p>{`💻 ${language}`}</p>
         </div>
-        <div className={'card__body'}>
-          <p>{description}</p>
+        <div className={styles.bottomIcon}>
+          <p>{`⭐ ${stargazers_count}`}</p>
         </div>
-        <div className={clsx('card__footer', styles.bottom)}>
-          <div className={styles.bottomIcon}>
-            <p>{`💻 ${language}`}</p>
-          </div>
-          <div className={styles.bottomIcon}>
-            <p>{`⭐ ${stargazers_count}`}</p>
-          </div>
-          <div className={styles.bottomIcon}>
-            <p>{`🍴 ${forks_count}`}</p>
-          </div>
-          <div className={styles.bottomSpace} />
+        <div className={styles.bottomIcon}>
+          <p>{`🍴 ${forks_count}`}</p>
         </div>
+        <div className={styles.bottomSpace} />
       </div>
     </div>
   );

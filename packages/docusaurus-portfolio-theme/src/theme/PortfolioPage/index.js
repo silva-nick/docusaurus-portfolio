@@ -1,4 +1,4 @@
-import React, { userState } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 
@@ -17,14 +17,14 @@ export default function PortfolioPage(props) {
       if (index == repoCards.length - 1) {
         grid.push(
           <div className={'row'} key={index}>
-            <div className={'col--6'}>{repoCards[index]}</div>
+            <div className={'col col--6'}>{repoCards[index]}</div>
           </div>,
         );
       } else {
         grid.push(
           <div className={'row'} key={index}>
-            <div className={'col'}>{repoCards[index]}</div>
-            <div className={'col'}>{repoCards[++index]}</div>
+            <div className={'col margin-bottom--lg'}>{repoCards[index]}</div>
+            <div className={'col margin-bottom--lg'}>{repoCards[++index]}</div>
           </div>,
         );
       }
@@ -34,12 +34,14 @@ export default function PortfolioPage(props) {
 
   return (
     <Layout title={pageProps.title} description={pageProps.description}>
-      <div className={styles.userHolder}>
-        <UserCard {...userProps} />
-      </div>
-      <div className={clsx(styles.repoHolder, 'container')}>
-        <ContentFrame />
-        {makeGrid(repoProps)}
+      <div className={styles.pPageLayout}>
+        <div className={styles.userHolder}>
+          <UserCard {...userProps} />
+        </div>
+        <div className={clsx(styles.repoHolder, 'container')}>
+          <ContentFrame />
+          {makeGrid(repoProps)}
+        </div>
       </div>
     </Layout>
   );

@@ -7,7 +7,7 @@ export default function ContentFrame(props) {
   }
 
   return (
-    <div className="row">
+    <div className={'row'}>
       {/*
         Custom defined content.
       */}
