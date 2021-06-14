@@ -7,7 +7,7 @@
 .cardDirect:hover {
   transition: all 0.25s;
   box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-  top: -4px;
+  top: -6px;
   transform: translateY(-4px);
 }
 
