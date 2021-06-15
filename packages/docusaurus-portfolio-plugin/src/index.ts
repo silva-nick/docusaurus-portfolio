@@ -60,7 +60,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
         return;
       }
 
-      const { addRoute, createData } = actions;
+      //const { addRoute, createData } = actions;
       const { user, repos } = portfolioData;
 
       await Promise.all(repos.map(async (repo) => {}));
