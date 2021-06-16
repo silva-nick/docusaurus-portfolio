@@ -1,7 +1,15 @@
 // Plugin options type
 export interface PluginOptions {
+  //id?: string; // TODO: support multiple instances
+  // Docusaurus base options
   path: string;
-  //id: string; // TODO: support multiple instances
+  routeBasePath: string;
+  pageTitle: string;
+  pageDescription: string;
+  repoCardComponent: string;
+  userCardComponent: string;
+  contentFrameComponent: string;
+  // Content options
   username: string;
   userOptions?: UserOptions;
   repoOptions?: RepoOptions;

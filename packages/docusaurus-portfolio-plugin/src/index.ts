@@ -1,25 +1,23 @@
-import { LoadContext, OptionValidationContext } from '@docusaurus/types';
+import {
+  LoadContext,
+  OptionValidationContext,
+  ValidationResult,
+} from '@docusaurus/types';
 import { getPluginI18nPath } from '@docusaurus/utils';
 import { ContentPaths } from '@docusaurus/utils/lib/markdownLinks';
 import { PluginOptions, UserOptions, RepoOptions, RepoData } from './types';
 
 import path from 'path';
 
+import { PluginOptionSchema } from './pluginOptionSchema';
 import { getUser, getRepos } from './api';
 
 export function validateOptions({
-  options,
   validate,
-}: OptionValidationContext<PluginOptions>) {
-  const { path, username } = options;
-
-  if (!path) {
-    throw new Error('Expected a target directory.');
-  }
-  if (!username) {
-    throw new Error('Expected a valid Github username.');
-  }
-  return options;
+  options,
+}: OptionValidationContext<PluginOptions>): ValidationResult<PluginOptions> {
+  const validatedOptions = validate(PluginOptionSchema, options);
+  return validatedOptions;
 }
 
 export default function plugin(context: LoadContext, options: PluginOptions) {
