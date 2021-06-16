@@ -34,14 +34,14 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
     contentPathLocalized: getPluginI18nPath({
       siteDir,
       locale: currentLocale,
-      pluginName: 'docusaurus-portfolio',
+      pluginName: 'docusaurus-portfolio-plugin',
     }),
   };
 
-  const dataDir = path.join(generatedFilesDir, 'docusaurus-portfolio');
+  const dataDir = path.join(generatedFilesDir, 'docusaurus-portfolio-plugin');
 
   return {
-    name: 'docusaurus-portfolio',
+    name: 'docusaurus-portfolio-plugin',
 
     // Uses ./api to fetch data from the Github api
     async loadContent() {

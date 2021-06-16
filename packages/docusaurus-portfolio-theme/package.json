@@ -7,7 +7,7 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "echo \"Error: no build script specified\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
