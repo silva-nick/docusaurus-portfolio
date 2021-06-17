@@ -1,6 +1,7 @@
 {
   "name": "docusaurus-portfolio-init",
   "version": "1.0.0-alpha.0",
+  "description": "A package to initialize a new docusaurus-portfolio site.",
   "repository": {
     "type": "git",
     "url": "https://github.com/silva-nick/docusaurus-portfolio.git",

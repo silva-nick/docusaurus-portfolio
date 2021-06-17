@@ -1,6 +1,7 @@
 {
   "name": "docusaurus-portfolio-theme",
   "version": "1.0.0-alpha.0",
+  "description": "A Docusaurus theme designed for docusaurus-portfolio.",
   "publishConfig": {
     "access": "public"
   },
