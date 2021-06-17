@@ -6,9 +6,7 @@ export interface PluginOptions {
   routeBasePath: string;
   pageTitle: string;
   pageDescription: string;
-  repoCardComponent: string;
-  userCardComponent: string;
-  contentFrameComponent: string;
+  portfolioPageComponent: string;
   // Content options
   username: string;
   userOptions?: UserOptions;
@@ -37,6 +35,7 @@ export interface UserData {
 }
 
 // github repo api params
+// default values are all handled by github api
 export interface RepoOptions {
   type?: string;
   sort?: string;

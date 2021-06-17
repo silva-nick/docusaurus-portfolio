@@ -8,7 +8,7 @@ import ContentFrame from '@theme/ContentFrame';
 import styles from './styles.module.css';
 
 export default function PortfolioPage(props) {
-  const { userProps, repoProps, pageProps } = props;
+  const { userProps, repoProps, pageTitle, pageDescription } = props;
 
   function makeGrid(repos) {
     const repoCards = repos.map((repo) => <RepoCard {...repo} />);
@@ -33,7 +33,7 @@ export default function PortfolioPage(props) {
   }
 
   return (
-    <Layout title={pageProps.title} description={pageProps.description}>
+    <Layout title={pageTitle} description={pageDescription}>
       <div className={styles.pPageLayout}>
         <div className={styles.userHolder}>
           <UserCard {...userProps} />

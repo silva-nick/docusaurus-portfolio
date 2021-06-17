@@ -5,12 +5,14 @@ export const DEFAULT_OPTIONS = {
   routeBasePath: '/',
   pageTitle: 'About Me',
   pageDescription: 'Github Repos',
-  repoCardComponent: '@theme/RepoCard',
-  userCardComponent: '@theme/UserCard',
-  contentFrameComponent: '@theme/ContentFrame',
+  portfolioPageComponent: '@theme/PortfolioPage',
   //username: string,
   userOptions: {},
   repoOptions: {},
+  pageOptions: {
+    title: 'my page',
+    description: 'write me to improve seo',
+  },
 };
 
 export const PluginOptionSchema = Joi.object({
@@ -20,12 +22,30 @@ export const PluginOptionSchema = Joi.object({
   pageDescription: Joi.string()
     .allow('')
     .default(DEFAULT_OPTIONS.pageDescription),
-  repoCardComponent: Joi.string().default(DEFAULT_OPTIONS.repoCardComponent),
-  userCardComponent: Joi.string().default(DEFAULT_OPTIONS.userCardComponent),
-  contentFrameComponent: Joi.string().default(
-    DEFAULT_OPTIONS.contentFrameComponent,
+  portfolioPageComponent: Joi.string().default(
+    DEFAULT_OPTIONS.portfolioPageComponent,
   ),
   username: Joi.string().required(),
-  userOptions: {}, //TODO: create an internal joi object
-  repoOptions: {},
+  userOptions: Joi.object({
+    fullname: Joi.string().optional(),
+    links: Joi.array().items(Joi.string()),
+  }),
+  repoOptions: Joi.object({
+    type: Joi.string()
+      .optional()
+      .equal(
+        'all',
+        'public',
+        'private',
+        'forks',
+        'sources',
+        'member',
+        'internal',
+      ),
+    sort: Joi.string()
+      .optional()
+      .equal('created', 'updated', 'pushed', 'full_name'),
+    direction: Joi.string().optional().equal('asc', 'desc'),
+    numRepos: Joi.number().optional(), // Default is all
+  }),
 });

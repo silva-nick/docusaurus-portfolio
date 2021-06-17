@@ -58,10 +58,33 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
         return;
       }
 
-      //const { addRoute, createData } = actions;
+      const {
+        path: sitePath,
+        pageTitle,
+        pageDescription,
+        portfolioPageComponent,
+      } = options;
+
+      const { addRoute, createData } = actions;
       const { user, repos } = portfolioData;
 
-      await Promise.all(repos.map(async (repo) => {}));
+      const userPath = await createData('user.json', JSON.stringify(user));
+      const repoPath = await createData(
+        'repos.json',
+        JSON.stringify({ repos }),
+      );
+
+      addRoute({
+        path: sitePath,
+        components: portfolioPageComponent,
+        modules: {
+          userProps: userPath,
+          repoProps: repoPath,
+          pageTitle,
+          pageDescription,
+        },
+        exact: true,
+      });
     },
   };
 }
