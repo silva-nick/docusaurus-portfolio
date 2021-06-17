@@ -1,10 +1,10 @@
 {
   "name": "docusaurus-portfolio-theme",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "publishConfig": {
     "access": "public"
   },
-  "repository":  {
+  "repository": {
     "type": "git",
     "url": "https://github.com/silva-nick/docusaurus-portfolio.git",
     "directory": "packages/docusaurus-portfolio-theme"
@@ -18,6 +18,5 @@
   "peerDependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
-  },
-  "devDependencies": {}
+  }
 }
