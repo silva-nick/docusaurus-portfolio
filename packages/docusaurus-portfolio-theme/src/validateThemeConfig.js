@@ -7,7 +7,7 @@ exports.DEFAULT_CONFIG = DEFAULT_CONFIG;
 
 const Schema = Joi.object({
   portfolio: Joi.object({
-    exampleOption: Joi.string().equal('example').default(DEFAULT_CONFIG),
+    exampleOption: Joi.string().default(DEFAULT_CONFIG).optional(),
   }),
 });
 exports.Schema = Schema;
