@@ -3,11 +3,7 @@ import {
   OptionValidationContext,
   ValidationResult,
 } from '@docusaurus/types';
-import { getPluginI18nPath } from '@docusaurus/utils';
-import { ContentPaths } from '@docusaurus/utils/lib/markdownLinks';
 import { PluginOptions, UserOptions, RepoOptions, RepoData } from './types';
-
-import path from 'path';
 
 import { PluginOptionSchema } from './pluginOptionSchema';
 import { getUser, getRepos } from './api';
@@ -21,23 +17,6 @@ export function validateOptions({
 }
 
 export default function plugin(context: LoadContext, options: PluginOptions) {
-  const {
-    siteDir,
-    generatedFilesDir,
-    i18n: { currentLocale },
-  } = context;
-
-  const contentPaths: ContentPaths = {
-    contentPath: path.resolve(siteDir, options.path),
-    contentPathLocalized: getPluginI18nPath({
-      siteDir,
-      locale: currentLocale,
-      pluginName: 'docusaurus-portfolio-plugin',
-    }),
-  };
-
-  const dataDir = path.join(generatedFilesDir, 'docusaurus-portfolio-plugin');
-
   return {
     name: 'docusaurus-portfolio-plugin',
 
