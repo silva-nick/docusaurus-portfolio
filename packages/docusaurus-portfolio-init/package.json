@@ -8,7 +8,9 @@
   },
   "author": "silva-nick <silva.d.nicholas@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

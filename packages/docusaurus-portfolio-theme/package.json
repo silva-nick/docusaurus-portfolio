@@ -1,6 +1,9 @@
 {
   "name": "docusaurus-portfolio-theme",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository":  {
     "type": "git",
     "url": "https://github.com/silva-nick/docusaurus-portfolio.git",
@@ -8,12 +11,13 @@
   },
   "author": "silva-nick <silva.d.nicholas@gmail.com>",
   "license": "MIT",
-  "private": true,
   "main": "src/index.js",
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-overlays": "^5.0.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {}
 }

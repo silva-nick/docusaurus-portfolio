@@ -1,16 +1,16 @@
 {
   "name": "docusaurus-portfolio",
-  "version": "1.0.0",
   "repository": "https://github.com/silva-nick/docusaurus-portfolio.git",
   "author": "silva-nick <silva.d.nicholas@gmail.com>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@types/node": "^15.12.1",
     "@docusaurus/core": "2.0.0-beta.0",
     "@docusaurus/module-type-aliases": "^2.0.0-beta.0",
     "@docusaurus/types": "^2.0.0-beta.0",
     "@docusaurus/utils": "2.0.0-beta.0",
-    "@types/node": "^15.12.1",
+    "lerna": "^4.0.0",
     "typescript": "^4.3.2"
   }
 }
