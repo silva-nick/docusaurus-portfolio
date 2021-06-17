@@ -35,8 +35,6 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
-      <TrophyOverlay />
-      <UserCard {...userData} />
     </Layout>
   );
 }
