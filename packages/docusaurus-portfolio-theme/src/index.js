@@ -1,11 +1,9 @@
-import path from 'path';
-import { validateThemeConfig } from './validateThemeConfig';
-
-theme.validateThemeConfig = validateThemeConfig;
+const path = require('path');
+const { validateThemeConfig } = require('./validateThemeConfig');
 
 const swizzleAllowedComponents = ['UserCard', 'RepoCard', 'ContentFrame'];
 
-export default function theme(context, options) {
+function theme(context, options) {
   return {
     name: 'docusaurus-portfolio-theme',
 
@@ -18,3 +16,7 @@ export default function theme(context, options) {
     },
   };
 }
+
+theme.validateThemeConfig = validateThemeConfig;
+
+module.exports = theme

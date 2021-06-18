@@ -1,4 +1,4 @@
-import { Joi } from '@docusaurus/utils-validation';
+const { Joi } = require('@docusaurus/utils-validation');
 
 const DEFAULT_CONFIG = {
   exampleOption: 'example',
@@ -12,6 +12,8 @@ const Schema = Joi.object({
 });
 exports.Schema = Schema;
 
-export function validateThemeConfig({ themeConfig, validate }) {
+function validateThemeConfig({ themeConfig, validate }) {
   return validate(Schema, themeConfig);
 }
+
+module.exports = validateThemeConfig;
