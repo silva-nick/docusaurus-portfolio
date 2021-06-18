@@ -13,8 +13,8 @@ export default function PortfolioPage(props) {
   function makeGrid(repos) {
     const repoCards = repos.map((repo) => <RepoCard {...repo} />);
     const grid = [];
-    for (let index in repoCards) {
-      if (index == repoCards.length - 1) {
+    for (let index = 0; index < repoCards.length; index++) {
+      if (index == (repoCards.length - 1)) {
         grid.push(
           <div className={'row'} key={index}>
             <div className={'col col--6'}>{repoCards[index]}</div>

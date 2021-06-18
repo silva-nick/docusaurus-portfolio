@@ -48,7 +48,7 @@ const test_props = {
       description:
         'This is an application that does something useful for development in the real world development',
       language: 'Java',
-      stargazers_count: 100,
+      stargazers_count: 101,
       forks_count: 10,
     },
     {
@@ -57,7 +57,7 @@ const test_props = {
       description:
         'This is an application that does something useful for development in the real world development',
       language: 'Java',
-      stargazers_count: 100,
+      stargazers_count: 102,
       forks_count: 10,
     },
     {
@@ -66,7 +66,7 @@ const test_props = {
       description:
         'This is an application that does something useful for development in the real world development',
       language: 'Java',
-      stargazers_count: 100,
+      stargazers_count: 103 ,
       forks_count: 10,
     },
   ],
