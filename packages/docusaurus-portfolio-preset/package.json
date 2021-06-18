@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-portfolio-preset",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.1-alpha.0",
   "description": "Portfolio preset for Docusaurus websites.",
   "publishConfig": {
     "access": "public"
