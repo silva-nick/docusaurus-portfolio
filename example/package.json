@@ -19,8 +19,6 @@
     "@mdx-js/react": "^1.6.21",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
-    "docusaurus-portfolio-plugin": "../packages/docusaurus-portfolio-plugin",
-    "docusaurus-portfolio-preset": "../packages/docusaurus-portfolio-preset",
     "docusaurus-portfolio-theme": "../packages/docusaurus-portfolio-theme",
     "file-loader": "^6.2.0",
     "react": "^17.0.1",
