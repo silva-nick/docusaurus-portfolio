@@ -54,7 +54,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
       );
       const pageDataPath = await createData(
         'pageData.json',
-        JSON.stringify({ pageTitle,pageDescription }),
+        JSON.stringify({ pageTitle, pageDescription }),
       );
 
       addRoute({

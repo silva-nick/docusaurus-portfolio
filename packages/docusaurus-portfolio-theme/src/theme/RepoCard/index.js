@@ -17,7 +17,7 @@ const exampleProps = {
 export default function RepoCard(props) {
   const {
     name,
-    repoUrl,
+    html_url,
     description,
     language,
     stargazers_count,
@@ -28,7 +28,7 @@ export default function RepoCard(props) {
     <div className={clsx('card card--full-height', styles.cardDirect)}>
       <a
         className={styles.cardLink}
-        href={repoUrl}/>
+        href={html_url}/>
       <div className={'card__header'}>
         <h3>{name}</h3>
       </div>

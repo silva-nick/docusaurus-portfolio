@@ -22,7 +22,7 @@ let userData = {
 export default function UserCard(props) {
   const {
     username,
-    fullName,
+    fullname,
     links,
     avatar_url,
     html_url,
@@ -60,8 +60,8 @@ export default function UserCard(props) {
       </a>
       <div className="avatar__intro">
         <h3 className="avatar__name">{username}</h3>
-        {fullName && (
-          <small className="avatar__name">{`{ ${fullName} }`}</small>
+        {fullname && (
+          <small className="avatar__name">{`{ ${fullname} }`}</small>
         )}
       </div>
       <br />

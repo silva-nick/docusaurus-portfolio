@@ -41,7 +41,7 @@ export default function PortfolioPage(props) {
         </div>
         <div className={clsx(styles.repoHolder, 'container')}>
           <ContentFrame />
-          {makeGrid(repoProps)}
+          {makeGrid(repoProps.repos)}
         </div>
       </div>
     </Layout>

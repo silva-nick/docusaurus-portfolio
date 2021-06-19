@@ -1,8 +1,8 @@
 import { Joi } from '@docusaurus/utils-validation';
 
 export const DEFAULT_OPTIONS = {
-  path: './me',
-  routeBasePath: '/me',
+  path: 'me',
+  routeBasePath: 'me',
   pageTitle: 'About Me',
   pageDescription: 'Github Repos',
   portfolioPageComponent: '@theme/PortfolioPage',
