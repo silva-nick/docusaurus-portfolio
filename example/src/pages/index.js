@@ -27,8 +27,10 @@ function HomepageHeader() {
 }
 
 const test_props = {
-  pageTitle: 'Test',
-  pageDescription: 'Debugging helper',
+  pageProps: {
+    pageTitle: 'Test',
+    pageDescription: 'Debugging helper',
+  },
   userProps: {
     username: 'silva-nick',
     fullName: 'Nick Silva',
@@ -41,7 +43,7 @@ const test_props = {
     bio: 'Sophomore CS Student.',
     created_at: '2018-06-05T15:17:27Z',
   },
-  repoProps: [
+  repoProps: {repos:[
     {
       name: 'Block-Dict',
       repoUrl: 'https://github.com/facebook/docusaurus',
@@ -66,13 +68,13 @@ const test_props = {
       description:
         'This is an application that does something useful for development in the real world development',
       language: 'Java',
-      stargazers_count: 103 ,
+      stargazers_count: 103,
       forks_count: 10,
     },
-  ],
+  ]},
 };
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  return <PortfolioPage {...test_props}/>;
+  return <PortfolioPage {...test_props} />;
 }

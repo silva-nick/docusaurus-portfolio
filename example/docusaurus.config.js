@@ -83,6 +83,9 @@ module.exports = {
       'docusaurus-portfolio-plugin',
       {
         username: 'silva-nick',
+        userOptions: {
+          fullname: 'Nick Silva',
+        },
       },
     ],
   ],
