@@ -3,7 +3,7 @@ import {
   OptionValidationContext,
   ValidationResult,
 } from '@docusaurus/types';
-import { PluginOptions, UserOptions, RepoOptions, RepoData } from './types';
+import { PluginOptions } from './types';
 
 import { PluginOptionSchema } from './pluginOptionSchema';
 import { getUser, getRepos } from './api';
@@ -52,15 +52,18 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
         'repos.json',
         JSON.stringify({ repos }),
       );
+      const pageDataPath = await createData(
+        'pageData.json',
+        JSON.stringify({ pageTitle,pageDescription }),
+      );
 
       addRoute({
         path: sitePath,
-        components: portfolioPageComponent,
+        component: portfolioPageComponent,
         modules: {
           userProps: userPath,
           repoProps: repoPath,
-          pageTitle,
-          pageDescription,
+          pageProps: pageDataPath,
         },
         exact: true,
       });

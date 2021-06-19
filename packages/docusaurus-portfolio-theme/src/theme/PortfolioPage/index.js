@@ -8,13 +8,14 @@ import ContentFrame from '@theme/ContentFrame';
 import styles from './styles.module.css';
 
 export default function PortfolioPage(props) {
-  const { userProps, repoProps, pageTitle, pageDescription } = props;
+  const { userProps, repoProps, pageProps } = props;
+  const { pageTitle, pageDescription } = pageProps;
 
   function makeGrid(repos) {
     const repoCards = repos.map((repo) => <RepoCard {...repo} />);
     const grid = [];
     for (let index = 0; index < repoCards.length; index++) {
-      if (index == (repoCards.length - 1)) {
+      if (index == repoCards.length - 1) {
         grid.push(
           <div className={'row'} key={index}>
             <div className={'col col--6'}>{repoCards[index]}</div>

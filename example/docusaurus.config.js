@@ -78,6 +78,14 @@ module.exports = {
     },
   },
   themes: ['docusaurus-portfolio-theme'],
+  plugins: [
+    [
+      'docusaurus-portfolio-plugin',
+      {
+        username: 'silva-nick',
+      },
+    ],
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',

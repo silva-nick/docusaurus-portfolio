@@ -23,10 +23,9 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
-    "@docusaurus/core": "2.0.0-beta.0",
-    "@docusaurus/module-type-aliases": "^2.0.0-beta.0",
     "@docusaurus/types": "^2.0.0-beta.0",
     "@docusaurus/utils": "2.0.0-beta.0",
+    "@docusaurus/utils-validation": "2.0.0-beta.0",
     "@types/node": "^15.12.1"
   }
 }

@@ -2,7 +2,7 @@ import { Joi } from '@docusaurus/utils-validation';
 
 export const DEFAULT_OPTIONS = {
   path: './me',
-  routeBasePath: '/',
+  routeBasePath: '/me',
   pageTitle: 'About Me',
   pageDescription: 'Github Repos',
   portfolioPageComponent: '@theme/PortfolioPage',
@@ -28,7 +28,7 @@ export const PluginOptionSchema = Joi.object({
   username: Joi.string().required(),
   userOptions: Joi.object({
     fullname: Joi.string().optional(),
-    links: Joi.array().items(Joi.string()),
+    links: Joi.array().items(Joi.string()).optional(),
   }),
   repoOptions: Joi.object({
     type: Joi.string()
