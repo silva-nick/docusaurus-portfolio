@@ -83,8 +83,17 @@ module.exports = {
       'docusaurus-portfolio-plugin',
       {
         username: 'silva-nick',
+        path: '/test',
+        pageTitle: "Nick's site",
+        pageDescription: 'About me, nick.',
         userOptions: {
           fullname: 'Nick Silva',
+        },
+        repoOptions: {
+          type: 'all',
+          sort: 'updated',
+          direction: 'desc',
+          numRepos: 100,
         },
       },
     ],
