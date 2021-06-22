@@ -28,7 +28,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
 
       const user = await getUser(username);
       const repos = await getRepos(username, repoOptions);
-      return { user: { ...user, ...userOptions }, repos };
+      return { user: { ...user, ...userOptions, username }, repos };
     },
 
     // Uses rendered data to generate react components

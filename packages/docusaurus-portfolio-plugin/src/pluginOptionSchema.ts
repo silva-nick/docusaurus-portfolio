@@ -44,7 +44,16 @@ export const PluginOptionSchema = Joi.object({
       ),
     sort: Joi.string()
       .optional()
-      .equal('created', 'updated', 'pushed', 'full_name'),
+      .equal(
+        'created',
+        'updated',
+        'pushed',
+        'full_name',
+        'size',
+        'stargazers_count',
+        'watchers_count',
+        'forks_count',
+      ),
     direction: Joi.string().optional().equal('asc', 'desc'),
     numRepos: Joi.number().optional(), // Default is all
   }),

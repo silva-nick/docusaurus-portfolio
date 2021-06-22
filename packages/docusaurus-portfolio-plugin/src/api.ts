@@ -27,7 +27,7 @@ export async function getRepos(username: string, options: RepoOptions) {
   type = type || 'owner';
   sort = sort || 'full_name';
   direction = direction || 'desc';
-  numRepos = numRepos || 6;
+  numRepos = numRepos || Number.MAX_VALUE;
   let tempNumRepos = numRepos;
 
   if (['created', 'updated', 'pushed', 'full_name'].indexOf(sort) < 0) {
