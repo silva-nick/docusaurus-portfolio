@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-portfolio-preset",
-  "version": "1.0.1-alpha.0",
+  "version": "1.2.0-alpha.0",
   "description": "Portfolio preset for Docusaurus websites.",
   "publishConfig": {
     "access": "public"
@@ -14,8 +14,8 @@
   "license": "MIT",
   "main": "src/index.js",
   "dependencies": {
-    "docusaurus-portfolio-plugin": "1.1.0-alpha.0",
-    "docusaurus-portfolio-theme": "1.1.0-alpha.0"
+    "docusaurus-portfolio-plugin": "^1.2.0-alpha.0",
+    "docusaurus-portfolio-theme": "^1.2.0-alpha.0"
   },
   "peerDependencies": {
     "react": "^16.8.4 || ^17.0.0",
