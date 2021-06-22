@@ -1,3 +1,6 @@
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'My Site',
@@ -17,6 +20,7 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
+        { to: '/me', label: 'About Me', position: 'left' },
         {
           type: 'doc',
           docId: 'intro',
@@ -25,7 +29,7 @@ module.exports = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/silva-nick/docusaurus-portfolio',
           label: 'GitHub',
           position: 'right',
         },
@@ -35,28 +39,20 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Info',
           items: [
             {
-              label: 'Tutorial',
+              label: 'About me',
               to: '/docs/intro',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Docs',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Tutorial',
+              to: '/docs/intro',
             },
           ],
         },
@@ -69,12 +65,16 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/silva-nick/docusaurus-portfolio',
             },
           ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    prism: {
+      theme: lightCodeTheme,
+      darkTheme: darkCodeTheme,
     },
   },
   themes: ['docusaurus-portfolio-theme'],
@@ -83,7 +83,7 @@ module.exports = {
       'docusaurus-portfolio-plugin',
       {
         username: 'silva-nick',
-        path: '/test',
+        path: '/me',
         pageTitle: "Nick's site",
         pageDescription: 'About me, nick.',
         userOptions: {
@@ -98,6 +98,7 @@ module.exports = {
       },
     ],
   ],
+
   presets: [
     [
       '@docusaurus/preset-classic',
