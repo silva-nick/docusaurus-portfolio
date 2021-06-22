@@ -1,4 +1,4 @@
-export default function preset(context, options = {}) {
+function preset(context, options = {}) {
   return {
     themes: [[require.resolve('docusaurus-portfolio-theme'), options.theme]],
     plugins: [
@@ -8,3 +8,5 @@ export default function preset(context, options = {}) {
     ],
   };
 }
+
+module.exports = preset;

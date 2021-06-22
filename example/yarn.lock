@@ -3481,8 +3481,30 @@ docusaurus-portfolio-plugin@../packages/docusaurus-portfolio-plugin:
     add "^2.0.6"
     node-fetch "^2.6.1"
 
+docusaurus-portfolio-plugin@1.1.0-alpha.0:
+  version "1.1.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-portfolio-plugin/-/docusaurus-portfolio-plugin-1.1.0-alpha.0.tgz#40248bfcf6b536608a153103909775a5c8c60915"
+  integrity sha512-l8PXG970CPwPwm5q2jG4bx6fJ48GaWxJnxfrBTJ6u0fBNnrrZJDu8rZSt91HlGlwd8Qkxly4CJlsQoFMOvdYcw==
+  dependencies:
+    "@types/node-fetch" "^2.5.10"
+    add "^2.0.6"
+    node-fetch "^2.6.1"
+
+docusaurus-portfolio-preset@../packages/docusaurus-portfolio-preset:
+  version "1.0.1-alpha.0"
+  dependencies:
+    docusaurus-portfolio-plugin "1.1.0-alpha.0"
+    docusaurus-portfolio-theme "1.1.0-alpha.0"
+
 docusaurus-portfolio-theme@../packages/docusaurus-portfolio-theme:
   version "1.1.0-alpha.0"
+  dependencies:
+    react-overlays "^5.0.1"
+
+docusaurus-portfolio-theme@1.1.0-alpha.0:
+  version "1.1.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-portfolio-theme/-/docusaurus-portfolio-theme-1.1.0-alpha.0.tgz#36fff6cd39d9b0a06c296f1d2dd9812839e6ecdf"
+  integrity sha512-pgS7Xc1D+WXsxqv/9Y/U6jk8v5yboAkMg8HSs5QN/UFM/pB1pVUVidLMZTqyyXko/FkfDXvdqB4mSBrNUYIiAA==
   dependencies:
     react-overlays "^5.0.1"
 
