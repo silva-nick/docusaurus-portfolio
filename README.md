@@ -7,7 +7,7 @@ ____
 `docusaurus-portfolio` is a set of packages designed for Docusaurus that allow users to display a stripped-down version of their Github page on their documentation website...
 
 ## Usage
-Currently, the best way to create a project using `docusaurus-portfolio` is to first initialize the project with `@docusaurus/init` (more information available at [this link](https://docusaurus.io/docs/next/installationhttps://docusaurus.io/docs/next/installation)).
+Currently, the best way to create a project using `docusaurus-portfolio` is to first initialize the project with `@docusaurus/init` (more information available at [this link](https://docusaurus.io/docs/next/installation)).
 
 Then, install both `docusaurus-portfolio-theme` and `docusaurus-portfolio-plugin` from NPM. `yarn add docusaurus-portfolio-theme docusaurus-portfolio-plugin`.
 
@@ -54,4 +54,4 @@ Contributions are always welcome!
  - Found a bug or want to request a new feature: _Open an Issue_
  - Is the documentation confusing: _Open a pull request on the documentation site or README.md_
  - Want to add any code: _Open a PR_
- - Looking for other ways: _Try adding docusaurus-portfolio to you're website_
+ - Looking for other ways: _Try adding docusaurus-portfolio to your website_

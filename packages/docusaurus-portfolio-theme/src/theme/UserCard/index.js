@@ -64,7 +64,6 @@ export default function UserCard(props) {
           <small className="avatar__name">{`{ ${fullname} }`}</small>
         )}
       </div>
-      <br />
       <small style={{ maxWidth: '12vw' }}>{bio}</small>
       <div className={styles.tHolder}>
         {company && (

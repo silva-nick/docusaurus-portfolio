@@ -24,10 +24,10 @@
 }
 
 .bottomIcon {
-  flex: 1;
+  flex: 1 1 auto;
   display: block;
 }
 
 .bottomSpace {
-  flex: 4;
+  flex: 4 0 auto;
 }
