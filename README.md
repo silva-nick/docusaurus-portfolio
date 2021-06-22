@@ -6,6 +6,8 @@ ____
 ## Introduction
 `docusaurus-portfolio` is a set of packages designed for Docusaurus that allow users to display a stripped-down version of their Github page on their documentation website...
 
+![image](https://user-images.githubusercontent.com/39960606/122971865-23b9eb80-d355-11eb-8b6b-a4f72b969e88.png)
+
 ## Usage
 Currently, the best way to create a project using `docusaurus-portfolio` is to first initialize the project with `@docusaurus/init` (more information available at [this link](https://docusaurus.io/docs/next/installation)).
 
