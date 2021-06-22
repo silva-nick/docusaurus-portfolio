@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'Docusaurus Portfolio',
   tagline: 'Github style portfolios for websites built on Docusaurus.',
-  url: 'https://github.com/silva-nick/docusaurus-portfolio',
+  url: 'https://github.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
