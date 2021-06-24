@@ -11,7 +11,7 @@ This package generates a website based on a default configuration specified in `
 To run the generator simply use the command:
 
 ```sh
-npm docusaurus-portfolio-init init
+npx docusaurus-portfolio-init init
 ```
 
 **Note:** The CLI has three variables:
