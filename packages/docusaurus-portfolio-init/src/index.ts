@@ -11,7 +11,6 @@ async function updateConfig(configPath: string, username: string) {
 }
 
 export default async function init(
-  rootDir: string,
   siteName?: string,
   template?: string,
   username?: string,
@@ -48,7 +47,10 @@ export default async function init(
   // Install plugin
   console.log(chalk.cyan('Installing docusaurus-portfolio'));
   try {
-    execSync(`cd ${siteName} && npm install --save docusaurus-portfolio-plugin docusaurus-portfolio-theme`, { stdio: 'inherit' });
+    execSync(
+      `cd ${siteName} && npm install --save docusaurus-portfolio-plugin docusaurus-portfolio-theme`,
+      { stdio: 'inherit' },
+    );
   } catch (err) {
     throw Error(chalk.red('Installation of plugin failed.'));
   }
@@ -69,11 +71,11 @@ export default async function init(
 
   console.log(chalk.cyan('adding portfolio config...'));
 
-  const dest = path.resolve(rootDir, siteName);
+  const dest = path.resolve(__dirname, siteName);
 
   // Copy template files to project
   fs.copyFileSync(
-    path.resolve(__dirname, '../templates/docusaurus.config.js'),
+    path.resolve(dest, '../templates/docusaurus.config.js'),
     `${siteName}/docusaurus.config.js`,
   );
 
@@ -84,4 +86,9 @@ export default async function init(
     throw Error(chalk.red('Failed to update configuration file.'));
   }
 
+  console.log(
+    chalk.green(
+      'Configuration successful! Start your site by running `yarn start` in the site directory.',
+    ),
+  );
 }
