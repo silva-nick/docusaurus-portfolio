@@ -4,5 +4,6 @@
     "incremental": true,
     "rootDir": "src",
     "outDir": "lib"
-  }
+  },
+  "exclude": ["templates"]
 }

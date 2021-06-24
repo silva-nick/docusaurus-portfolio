@@ -19,3 +19,10 @@ npx docusaurus-portfolio-init init
 1.  siteName: the site name and directory of the project
 1.  username: your GitHub username
 1.  template: the template to be used
+
+Finally, start the project by navigating into the new directory and running.
+
+```sh
+cd <siteName>
+yarn start
+```
