@@ -11,9 +11,13 @@ ____
 ## Usage
 Currently, the best way to create a project using `docusaurus-portfolio` is to first initialize the project with `@docusaurus/init` (more information available at [this link](https://docusaurus.io/docs/next/installation)).
 
-Then, install both `docusaurus-portfolio-theme` and `docusaurus-portfolio-plugin` from NPM. `yarn add docusaurus-portfolio-theme docusaurus-portfolio-plugin`.
+Then, install both `docusaurus-portfolio-theme` and `docusaurus-portfolio-plugin` from NPM. 
 
-Finally, add the theme and plugin to `docusaurus.config.js`. More information about configuration options are available in the documentation pages for each package. Here is an example configuration.
+```sh
+yarn add docusaurus-portfolio-theme docusaurus-portfolio-plugin
+```
+
+Finally, add the theme and plugin to `docusaurus.config.js`. More information about configuration options are available in the documentation pages for each package (_in progress_). Here is an example configuration.
 
 ```javascript
   themes: ['docusaurus-portfolio-theme'],
@@ -21,15 +25,17 @@ Finally, add the theme and plugin to `docusaurus.config.js`. More information ab
     [
       'docusaurus-portfolio-plugin',
       {
-        username: 'silva-nick',
+        username: '<GITHUB-USERNAME>',
         userOptions: {
-          fullname: 'Nick Silva',
+          fullname: '<YOUR-NAME>',
           ...
         },
       },
     ],
   ],
 ```
+
+To get your
 
 The fastest way to get started with `docusaurus-portfolio` is to initialize a package through `docusaurus-portfolio-init`. Currently in development...
 

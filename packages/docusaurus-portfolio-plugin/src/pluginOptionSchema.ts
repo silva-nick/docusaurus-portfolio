@@ -9,10 +9,6 @@ export const DEFAULT_OPTIONS = {
   //username: string,
   userOptions: {},
   repoOptions: {},
-  pageOptions: {
-    title: 'my page',
-    description: 'write me to improve seo',
-  },
 };
 
 export const PluginOptionSchema = Joi.object({
