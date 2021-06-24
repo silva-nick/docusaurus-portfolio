@@ -1,3 +1,5 @@
 ## Docusaurus Portfolio Init
-____
-__tbd__
+
+---
+
+Currently not functional.

@@ -1,3 +1,5 @@
 ## Docusaurus Portfolio Preset
-____
-__tbd__
+
+---
+
+Currently not functional.
