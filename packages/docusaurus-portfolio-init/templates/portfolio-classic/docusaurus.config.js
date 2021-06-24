@@ -62,6 +62,25 @@ module.exports = {
       // copyright: `Copyright © ${new Date().getFullYear()} MyPortfolio. Built with Docusaurus.`,
     },
   },
+
+  themes: ['docusaurus-portfolio-theme'],
+  plugins: [
+    [
+      'docusaurus-portfolio-plugin',
+      {
+        username: '<GITHUB-USERNAME>',
+        pageTitle: "My Site",
+        pageDescription: 'About me.',
+        userOptions: {},
+        repoOptions: {
+          type: 'all',
+          sort: 'updated',
+          direction: 'desc',
+        },
+      },
+    ],
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',
