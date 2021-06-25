@@ -35,13 +35,18 @@ Finally, add the theme and plugin to `docusaurus.config.js`. More information ab
           fullname: '<YOUR-NAME>',
           ...
         },
-        ...                                         // More configuration in /packages/...plugin/README.md
+        ...                                         // More configuration in /packages/docusaurus-portfolio-plugin/README.md
       },
     ],
   ],
 ```
 
-The fastest way to get started with `docusaurus-portfolio` is to initialize a package through `docusaurus-portfolio-init`. Currently in development...
+The fastest way to get started with `docusaurus-portfolio` is to initialize a package through `docusaurus-portfolio-init`. To run the generator simply use the command:
+
+```sh
+npx docusaurus-portfolio-init init
+```
+*Note: `docusaurus-portfolio-init` is in alpha an may behave unexpectedly.
 
 ## Packages
 
@@ -49,19 +54,19 @@ This project uses [Lerna](https://lerna.js.org/) to manage all packages. Each pa
 
 #### [`docusaurus-portfolio-init`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-init)
 
-tbd
+Docusaurus website generator built off of `@docusaurus/init`. 
 
 #### [`docusaurus-portfolio-plugin`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-plugin)
 
-tbd
+Docusaurus portfolio main
 
 #### [`docusaurus-portfolio-theme`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-theme)
 
-tbd
+The React.js components that drive `docusaurus-portfolio`. 
 
 #### [`docusaurus-portfolio-preset`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-preset)
 
-tbd
+__In development.__ Docusaurus preset to help speed up development using `docusaurus-portfolio`. 
 
 ## Contributing
 
