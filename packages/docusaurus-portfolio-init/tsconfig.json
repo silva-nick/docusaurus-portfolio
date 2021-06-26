@@ -2,8 +2,9 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "incremental": true,
+    "outDir": "dist",
     "rootDir": "src",
-    "outDir": "lib"
+    "noEmit": false
   },
-  "exclude": ["templates"]
+  "exclude": ["dist", "templates"]
 }
