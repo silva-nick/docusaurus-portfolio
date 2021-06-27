@@ -63,7 +63,7 @@ export default async function init(
       message: 'What is your GitHub UserName?',
       initial: 'example',
     });
-    username = prompt.name;
+    username = prompt.username;
   }
   if (!username) {
     throw Error(chalk.red('A username is required'));
@@ -75,7 +75,7 @@ export default async function init(
 
   // Copy template files to project
   fs.copyFileSync(
-    path.resolve(dest, 'templates/docusaurus.config.js'),
+    path.resolve(__dirname, 'templates/docusaurus.config.js'),
     `${siteName}/docusaurus.config.js`,
   );
 
