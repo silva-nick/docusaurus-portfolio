@@ -5,13 +5,9 @@ import { execSync } from 'child_process';
 import prompts from 'prompts';
 
 async function updateConfig(configPath: string, username: string) {
-  console.log("1");
   const file = await fs.readFile(configPath, 'utf-8');
-  console.log("2");
-  file.replace(/<GITHUB-USERNAME>/, username);
-  console.log("3");
-  await fs.outputFile(configPath, file);
-  console.log("4");
+  const newfile = file.replace(/<GITHUB-USERNAME>/, username);
+  await fs.outputFile(configPath, newfile);
   return;
 }
 
@@ -80,16 +76,17 @@ export default async function init(
     `${siteName}/docusaurus.config.js`,
   );
 
-  // Update package.json info.
+  // Update docusaurus.config.js info.
   try {
     await updateConfig(path.join(siteName, 'docusaurus.config.js'), username);
   } catch (err) {
     throw Error(chalk.red('Failed to update configuration file.'));
   }
 
-  console.log(
-    chalk.green(
-      'Configuration successful! Start your site by running `yarn start` in the site directory.',
-    ),
-  );
+  console.log();
+  console.log(chalk.green('Configuration successful!'));
+  console.log('We recommend that you begin by typing:');
+  console.log();
+  console.log(chalk.cyan('  cd'), siteName);
+  console.log(`  ${chalk.cyan(`yarn start / npm run start`)}`);
 }

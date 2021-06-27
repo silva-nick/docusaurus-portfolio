@@ -3,6 +3,7 @@ import {
   OptionValidationContext,
   ValidationResult,
 } from '@docusaurus/types';
+import { addTrailingPathSeparator } from '@docusaurus/utils';
 import { PluginOptions } from './types';
 
 import { PluginOptionSchema } from './pluginOptionSchema';
@@ -58,7 +59,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
       );
 
       addRoute({
-        path: sitePath,
+        path: addTrailingPathSeparator(sitePath),
         component: portfolioPageComponent,
         modules: {
           userProps: userPath,

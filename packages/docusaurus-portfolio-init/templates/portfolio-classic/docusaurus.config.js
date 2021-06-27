@@ -2,7 +2,7 @@
 module.exports = {
   title: 'My Portfolio',
   tagline: 'A React-based static github website template.',
-  //url: '',
+  url: 'https://github.com',
   baseUrl: '/',
   organizationName: '', // Usually your GitHub org/user name.
   projectName: '', // Usually your repo name.
@@ -11,27 +11,22 @@ module.exports = {
   favicon: 'img/favicon.ico',
   themeConfig: {
     navbar: {
-      title: 'NavTitle',
+      title: 'Home',
       logo: {
         alt: 'My Logo',
-        src: 'img/logo.png',
+        src: 'img/logo.svg',
       },
       items: [
+        { to: 'me', label: 'About Me', position: 'left' },
         {
-          to: '', //dir of content
-          activeBasePath: 'test',
-          label: 'Test',
+          type: 'doc',
+          docId: 'intro',
           position: 'left',
-        },
-        {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docusaurus',
-          position: 'left',
+          label: 'Documentation',
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/silva-nick/docusaurus-portfolio',
+          href: 'https://github.com/<GITHUB-USERNAME>',
           label: 'GitHub',
           position: 'right',
         },
@@ -69,7 +64,7 @@ module.exports = {
       'docusaurus-portfolio-plugin',
       {
         username: '<GITHUB-USERNAME>',
-        pageTitle: "My Site",
+        pageTitle: 'My Site',
         pageDescription: 'About me.',
         userOptions: {},
         repoOptions: {
@@ -100,12 +95,6 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
-    ],
-    [
-      'docusaurus-portfolio',
-      {
-        //Config
       },
     ],
   ],
