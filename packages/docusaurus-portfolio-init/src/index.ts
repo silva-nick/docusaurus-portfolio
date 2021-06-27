@@ -37,7 +37,7 @@ export default async function init(
   // Run @docusaurus/init.
   try {
     execSync(
-      `npx @docusaurus/init@latest init --use-npm --loglevel=error ${siteName} classic `,
+      `npx @docusaurus/init@latest init --use-npm ${siteName} classic `,
       { stdio: 'inherit' },
     );
   } catch (error) {

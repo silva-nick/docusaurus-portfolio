@@ -3,7 +3,6 @@ import {
   OptionValidationContext,
   ValidationResult,
 } from '@docusaurus/types';
-import { addTrailingPathSeparator } from '@docusaurus/utils';
 import { PluginOptions } from './types';
 
 import { PluginOptionSchema } from './pluginOptionSchema';
@@ -15,6 +14,10 @@ export function validateOptions({
 }: OptionValidationContext<PluginOptions>): ValidationResult<PluginOptions> {
   const validatedOptions = validate(PluginOptionSchema, options);
   return validatedOptions;
+}
+
+function addLeadingSlash(str: string): string {
+  return str.startsWith('/') ? str : `/${str}`;
 }
 
 export default function plugin(context: LoadContext, options: PluginOptions) {
@@ -59,7 +62,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
       );
 
       addRoute({
-        path: addTrailingPathSeparator(sitePath),
+        path: addLeadingSlash(sitePath),
         component: portfolioPageComponent,
         modules: {
           userProps: userPath,
