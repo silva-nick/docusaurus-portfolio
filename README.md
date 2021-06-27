@@ -64,10 +64,6 @@ Docusaurus portfolio main
 
 The React.js components that drive `docusaurus-portfolio`. 
 
-#### [`docusaurus-portfolio-preset`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-preset)
-
-__In development.__ Docusaurus preset to help speed up development using `docusaurus-portfolio`. 
-
 ## Contributing
 
 Contributions are always welcome!
