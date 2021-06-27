@@ -75,7 +75,7 @@ export default async function init(
 
   // Copy template files to project
   fs.copyFileSync(
-    path.resolve(dest, '../templates/docusaurus.config.js'),
+    path.resolve(dest, 'templates/docusaurus.config.js'),
     `${siteName}/docusaurus.config.js`,
   );
 
