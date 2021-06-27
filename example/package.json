@@ -21,9 +21,7 @@
     "clsx": "^1.1.1",
     "file-loader": "^6.2.0",
     "prism-react-renderer": "^1.2.1",
-    "docusaurus-portfolio-preset": "../packages/docusaurus-portfolio-preset",
     "docusaurus-portfolio-plugin": "../packages/docusaurus-portfolio-plugin",
-    "docusaurus-portfolio-theme": "../packages/docusaurus-portfolio-theme",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "url-loader": "^4.1.1"

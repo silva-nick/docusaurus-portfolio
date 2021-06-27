@@ -77,7 +77,6 @@ module.exports = {
       darkTheme: darkCodeTheme,
     },
   },
-  themes: ['docusaurus-portfolio-theme'],
   plugins: [
     [
       'docusaurus-portfolio-plugin',

@@ -4,9 +4,12 @@ import {
   ValidationResult,
 } from '@docusaurus/types';
 import { PluginOptions } from './types';
+import path from 'path';
 
 import { PluginOptionSchema } from './pluginOptionSchema';
 import { getUser, getRepos } from './api';
+
+const swizzleAllowedComponents = ['UserCard', 'RepoCard', 'ContentFrame'];
 
 export function validateOptions({
   validate,
@@ -24,7 +27,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
   return {
     name: 'docusaurus-portfolio-plugin',
 
-    // Uses ./api to fetch data from the Github api
+    // Uses ./api to fetch data from the Github api.
     async loadContent() {
       let { username, userOptions, repoOptions } = options;
       userOptions = userOptions ?? {};
@@ -35,7 +38,7 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
       return { user: { ...user, ...userOptions, username }, repos };
     },
 
-    // Uses rendered data to generate react components
+    // Uses rendered data to generate react components.
     async contentLoaded({ content: portfolioData, actions }) {
       if (!portfolioData) {
         return;
@@ -72,5 +75,19 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
         exact: true,
       });
     },
+
+    // Theme lifecycle api
+
+    // Directs theme requests to react components.
+    getThemePath() {
+      return path.resolve(__dirname, './theme');
+    },
+
+    // Returns list of components that are safe to be user customized.
+    getSwizzleComponentList() {
+      return swizzleAllowedComponents;
+    },
   };
 }
+
+export { validateThemeConfig } from './validateThemeConfig';

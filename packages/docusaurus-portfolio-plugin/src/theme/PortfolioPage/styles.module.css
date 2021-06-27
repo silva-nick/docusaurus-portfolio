@@ -1,0 +1,26 @@
+.pPageLayout {
+  display: flex;
+}
+
+.userHolder {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20vh;
+
+  flex: 0;
+  width: 20vw;
+  height: 100%;
+
+  padding: 1rem;
+  margin: 0;
+}
+
+.repoHolder {
+  position: relative;
+
+  flex: 1;
+  width: 80vw;
+  height: 100%;
+
+  margin: 5vh 0;
+}

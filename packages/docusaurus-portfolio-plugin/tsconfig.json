@@ -3,7 +3,13 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
-    "noEmit": false
+    "noEmit": false,
+    "lib": ["DOM"],
+    "module": "esnext",
+    "noImplicitAny": false,
+    "jsx": "react",
+    "baseUrl": "src"
   },
+  "include": ["src/"],
   "exclude": ["./dist"]
 }

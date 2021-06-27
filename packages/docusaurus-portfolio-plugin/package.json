@@ -1,7 +1,7 @@
 {
   "name": "docusaurus-portfolio-plugin",
   "version": "2.2.3-alpha.0",
-  "description": "Portfolio plugin for docusaurus-portfolio.",
+  "description": "Portfolio plugin and theme for docusaurus-portfolio.",
   "publishConfig": {
     "access": "public"
   },
@@ -20,7 +20,12 @@
   "dependencies": {
     "@types/node-fetch": "^2.5.10",
     "add": "^2.0.6",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "react-overlays": "^5.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4 || ^17.0.0",
+    "react-dom": "^16.8.4 || ^17.0.0"
   },
   "devDependencies": {
     "@docusaurus/types": "^2.0.0-beta.0",
