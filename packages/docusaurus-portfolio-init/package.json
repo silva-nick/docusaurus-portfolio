@@ -13,15 +13,17 @@
     "access": "public"
   },
   "main": "dist/index.js",
+  "bin": {
+    "docusaurus-portfolio-init": "bin/index.js"
+  },
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js"
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "@docusaurus/init": "^2.0.0-beta.1",
     "chalk": "^4.1.1",
-    "commander": "^7.2.0",
+    "commander": "^8.0.0",
     "fs-extra": "^10.0.0",
     "prompts": "^2.4.1"
   },
