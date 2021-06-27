@@ -6,5 +6,5 @@
     "rootDir": "src",
     "noEmit": false
   },
-  "exclude": ["dist", "bin"]
+  "exclude": ["dist", "bin", "templates"]
 }

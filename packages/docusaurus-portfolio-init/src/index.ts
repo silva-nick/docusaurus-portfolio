@@ -5,9 +5,14 @@ import { execSync } from 'child_process';
 import prompts from 'prompts';
 
 async function updateConfig(configPath: string, username: string) {
+  console.log("1");
   const file = await fs.readFile(configPath, 'utf-8');
+  console.log("2");
   file.replace(/<GITHUB-USERNAME>/, username);
+  console.log("3");
   await fs.outputFile(configPath, file);
+  console.log("4");
+  return;
 }
 
 export default async function init(
@@ -32,12 +37,10 @@ export default async function init(
     throw Error(chalk.red('A site name is required'));
   }
 
-  template ?? 'classic';
-
   // Run @docusaurus/init.
   try {
     execSync(
-      `npx @docusaurus/init@latest init --use-npm ${siteName} ${template} `,
+      `npx @docusaurus/init@latest init --use-npm ${siteName} classic `,
       { stdio: 'inherit' },
     );
   } catch (error) {
@@ -71,17 +74,15 @@ export default async function init(
 
   console.log(chalk.cyan('adding portfolio config...'));
 
-  const dest = path.resolve(__dirname, siteName);
-
   // Copy template files to project
   fs.copyFileSync(
-    path.resolve(__dirname, 'templates/docusaurus.config.js'),
+    path.resolve(__dirname, `../templates/${template}/docusaurus.config.js`),
     `${siteName}/docusaurus.config.js`,
   );
 
   // Update package.json info.
   try {
-    await updateConfig(path.join(dest, 'package.json'), username);
+    await updateConfig(path.join(siteName, 'docusaurus.config.js'), username);
   } catch (err) {
     throw Error(chalk.red('Failed to update configuration file.'));
   }
