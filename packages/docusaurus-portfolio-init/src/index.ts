@@ -6,7 +6,7 @@ import prompts from 'prompts';
 
 async function updateConfig(configPath: string, username: string) {
   const file = await fs.readFile(configPath, 'utf-8');
-  const newfile = file.replace(/<GITHUB-USERNAME>/, username);
+  const newfile = file.replace(/<GITHUB-USERNAME>/g, username);
   await fs.outputFile(configPath, newfile);
   return;
 }
@@ -17,7 +17,8 @@ export default async function init(
   username?: string,
 ): Promise<void> {
   // Start initialization.
-  console.log(chalk.cyan('running docusaurus init'));
+  console.log(chalk.cyan('running docusaurus-portfolio-init'));
+  console.log();
 
   // Prompt if siteName is not passed from CLI.
   if (!siteName) {
@@ -36,7 +37,7 @@ export default async function init(
   // Run @docusaurus/init.
   try {
     execSync(
-      `npx @docusaurus/init@latest init --use-npm ${siteName} classic `,
+      `npx @docusaurus/init@latest init --use-npm --loglevel=error ${siteName} classic `,
       { stdio: 'inherit' },
     );
   } catch (error) {
