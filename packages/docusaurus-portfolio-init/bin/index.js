@@ -6,7 +6,7 @@
 
 const chalk = require('chalk');
 const program = require('commander');
-const { default: init } = require('../lib');
+const { default: init } = require('../dist');
 
 program
   .version(require('../package.json').version)
