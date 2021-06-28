@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import styles from './styles.module.css';
 import TrophyOverlay from '@theme/TrophyOverlay';
+import * as styles from './styles.module.css';
 
 /*
 let userData = {

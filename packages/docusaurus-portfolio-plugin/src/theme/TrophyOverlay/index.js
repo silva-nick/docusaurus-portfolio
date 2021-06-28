@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Overlay from 'react-overlays/Overlay';
 
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 
 export default function TrophyOverlay(props) {
   const [show, setShow] = useState(false);

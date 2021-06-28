@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 
 /*
 const exampleProps = {
@@ -26,9 +26,7 @@ export default function RepoCard(props) {
 
   return (
     <div className={clsx('card card--full-height', styles.cardDirect)}>
-      <a
-        className={styles.cardLink}
-        href={html_url}/>
+      <a className={styles.cardLink} href={html_url} />
       <div className={'card__header'}>
         <h3>{name}</h3>
       </div>

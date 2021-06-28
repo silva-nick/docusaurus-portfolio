@@ -4,7 +4,7 @@ import {
   ValidationResult,
 } from '@docusaurus/types';
 import { PluginOptions } from './types';
-import path from 'path';
+import  path  from 'path';
 
 import { PluginOptionSchema } from './pluginOptionSchema';
 import { getUser, getRepos } from './api';
@@ -77,6 +77,30 @@ export default function plugin(context: LoadContext, options: PluginOptions) {
     },
 
     // Theme lifecycle api
+
+    // Setup module style css
+    configureWebpack() {
+      return {
+        module: {
+          rules: [
+            {
+              test: /\.css$/,
+              include: path.join(__dirname, 'src/theme'),
+              use: [
+                'style-loader',
+                {
+                  loader: 'typings-for-css-modules-loader',
+                  options: {
+                    modules: true,
+                    namedExport: true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      };
+    },
 
     // Directs theme requests to react components.
     getThemePath() {

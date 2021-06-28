@@ -2,9 +2,9 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "lib": ["DOM"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    //"allowSyntheticDefaultImports": true,
+    //"module": "esnext",
+    //"moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "noEmit": false,

@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import RepoCard from '@theme/RepoCard';
 import UserCard from '@theme/UserCard';
 import ContentFrame from '@theme/ContentFrame';
-import styles from './styles.module.css';
+import * as styles from './styles.module.css';
 
 export default function PortfolioPage(props) {
   const { userProps, repoProps, pageProps } = props;
