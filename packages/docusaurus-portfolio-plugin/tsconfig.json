@@ -5,10 +5,10 @@
     "rootDir": "./src",
     "noEmit": false,
     "lib": ["DOM"],
-    "module": "esnext",
-    "noImplicitAny": false,
+    //"module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
-    "baseUrl": "src"
   },
   "include": ["src/"],
   "exclude": ["./dist"]
