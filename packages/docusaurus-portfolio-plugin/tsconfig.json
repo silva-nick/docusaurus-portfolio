@@ -1,15 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "lib": ["DOM"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    //"allowSyntheticDefaultImports": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "noEmit": false,
-    "lib": ["DOM"],
-    //"module": "esnext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react",
   },
-  "include": ["src/"],
+  "include": ["./src"],
   "exclude": ["./dist"]
 }
