@@ -55,6 +55,20 @@ export default async function init(
     throw Error(chalk.red('Installation of plugin failed.'));
   }
 
+    // Prompt if template is not passed from CLI.
+    if (!template) {
+      const prompt = await prompts({
+        type: 'text',
+        name: 'name',
+        message: 'Which template do you want to use (portfolio-classic / authored-classic)?',
+        initial: 'portfolio-classic',
+      });
+      template = prompt.name;
+    }
+    if (!template) {
+      throw Error(chalk.red('A template is required.'));
+    }
+
   // Prompt if usename is not passed from CLI.
   if (!username) {
     const prompt = await prompts({
@@ -66,16 +80,27 @@ export default async function init(
     username = prompt.username;
   }
   if (!username) {
-    throw Error(chalk.red('A username is required'));
+    throw Error(chalk.red('A username is required.'));
   }
 
   console.log(chalk.cyan('adding portfolio config...'));
 
   // Copy template files to project
-  fs.copyFileSync(
-    path.resolve(__dirname, `../templates/${template}/docusaurus.config.js`),
-    `${siteName}/docusaurus.config.js`,
-  );
+  if (template && template === "portfolio-classic" || template === "authored-classic"){
+    try {
+      fs.copy(
+        path.resolve(__dirname, `../templates/${template}/`),
+        `${siteName}/`,
+      );
+    } catch (error) {
+      console.log(
+        `Copying Docusaurus template ${chalk.cyan(template)} failed!`,
+      );
+      throw error;
+    }
+  } else {
+    throw  Error(chalk.red('A valid template is required.'));
+  }
 
   // Update docusaurus.config.js info.
   try {

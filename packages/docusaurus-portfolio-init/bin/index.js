@@ -23,7 +23,7 @@ program
 program
   .command('init [siteName] [template] [username]')
   .description('Initialize website with docusaurus-portfolio.')
-  .action((siteName = 'my-site', template = 'portfolio-classic', username) => {
+  .action((siteName, template, username) => {
     wrapCommand(init)(siteName, template, username);
   });
 
