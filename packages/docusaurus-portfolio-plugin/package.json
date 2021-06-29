@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-portfolio-plugin",
-  "version": "2.2.3-alpha.0",
+  "version": "1.0.0",
   "description": "Portfolio plugin for docusaurus-portfolio.",
   "publishConfig": {
     "access": "public"
