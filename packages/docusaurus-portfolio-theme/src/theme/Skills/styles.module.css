@@ -1,0 +1,23 @@
+.skillCard {
+  display: contents;
+}
+
+.skillPill {
+  display: inline-grid;
+  place-items: center;
+
+  width: fit-content;
+  height: 2.5rem;
+  padding: 0 1rem;
+  margin: 0.5rem;
+
+  color: #050404;
+  border: none;
+  border-radius: 8px;
+
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.skillPill:hover {
+  transform: translate(0%, -25%);
+}

@@ -1,0 +1,25 @@
+.linkButton {
+  font-weight: bold;
+  margin: 4px;
+  padding: 1 0.5rem;
+}
+
+.linkButton:hover {
+  text-decoration: none;
+}
+
+.timelineItem {
+    width:100%;
+    position: relative;
+    border-right: 4px solid var(--ifm-color-primary);
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 00%;
+    background: var(--ifm-color-primary);
+    position: absolute;
+    top: 0;
+    right: -8px;
+}

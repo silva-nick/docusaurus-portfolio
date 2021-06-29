@@ -1,0 +1,14 @@
+.linkCard {
+  display: contents;
+}
+
+.linkImgHolder {
+    display: inline-grid;
+    place-items: center;
+    margin: 0.5rem;
+}
+
+.linkImg {
+  width: 2rem;
+  height: 2rem;
+}
