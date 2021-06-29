@@ -124,9 +124,10 @@ export default async function init(
 
     // Update about me page references
     try {
-      await updateConfig(path.join(siteName, 'docs/about-me.mdx'), username);
-    } catch (err) {
-      throw Error(chalk.red('Failed to update about me file.'));
+      await updateConfig(path.join(siteName, 'docs/about.mdx'), username);
+    } catch (error) {
+      console.log(chalk.red('Failed to update about me file.'));
+      throw error;
     }
   } else {
     throw Error(chalk.red('A valid template is required.'));
@@ -135,8 +136,9 @@ export default async function init(
   // Update docusaurus.config.js info.
   try {
     await updateConfig(path.join(siteName, 'docusaurus.config.js'), username);
-  } catch (err) {
-    throw Error(chalk.red('Failed to update configuration file.'));
+  } catch (error) {
+    console.log(chalk.red('Failed to update configuration file.'));
+    throw error;
   }
 
   console.log();
