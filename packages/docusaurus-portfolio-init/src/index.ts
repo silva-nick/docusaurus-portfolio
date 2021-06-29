@@ -83,12 +83,13 @@ export default async function init(
     throw Error(chalk.red('A username is required.'));
   }
 
+  console.log();
   console.log(chalk.cyan('adding portfolio config...'));
 
   // Copy template files to project
   if (template && template === "portfolio-classic" || template === "authored-classic"){
     try {
-      fs.copy(
+      await fs.copy(
         path.resolve(__dirname, `../templates/${template}/`),
         `${siteName}/`,
       );
@@ -107,6 +108,11 @@ export default async function init(
     await updateConfig(path.join(siteName, 'docusaurus.config.js'), username);
   } catch (err) {
     throw Error(chalk.red('Failed to update configuration file.'));
+  }
+  
+  // Delete default main page for portfolio site.
+  if (template==="portfolio-classic") {
+    await fs.unlink(`${siteName}/src/index.js`)
   }
 
   console.log();

@@ -64,6 +64,7 @@ module.exports = {
       'docusaurus-portfolio-plugin',
       {
         username: '<GITHUB-USERNAME>',
+        path: '/',
         pageTitle: 'My Site',
         pageDescription: 'About me.',
         userOptions: {},
@@ -71,6 +72,7 @@ module.exports = {
           type: 'all',
           sort: 'updated',
           direction: 'desc',
+          numRepos: 10,
         },
       },
     ],
