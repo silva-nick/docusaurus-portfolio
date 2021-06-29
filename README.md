@@ -10,7 +10,7 @@ A [Docusaurus v2](https://github.com/facebook/docusaurus) plugin that generates 
 
 `docusaurus-portfolio` is a set of packages designed for Docusaurus that allow users to display a stripped-down version of their Github page on their documentation website...
 
-![image](https://user-images.githubusercontent.com/39960606/122971865-23b9eb80-d355-11eb-8b6b-a4f72b969e88.png)
+![image](https://user-images.githubusercontent.com/39960606/123738850-39ef0c80-d86b-11eb-8be7-6e6dcd473dd6.png)
 
 ## Usage
 
