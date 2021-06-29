@@ -19,7 +19,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'about-me',
+          docId: 'about',
           position: 'left',
           label: 'More Info',
         },
@@ -35,20 +35,36 @@ module.exports = {
       style: 'dark',
       links: [
         {
-          title: 'MyPortfolio',
+          title: 'silva-nick',
           items: [
             {
-              label: 'Overview',
-              to: 'www.google.com',
+              label: 'Home',
+              to: '/',
+            },
+            {
+              label: 'Resume',
+              to: '/docs/resume',
+            },
+            {
+              label: 'GitHub',
+              to: 'https://github.com/<GITHUB-USER>',
             },
           ],
         },
         {
-          title: 'Guides',
+          title: 'About',
           items: [
             {
-              label: 'Installation',
-              to: 'www.google.com',
+              label: 'About me',
+              to: '/docs/about',
+            },
+            {
+              label: 'Timeline',
+              to: '/docs/timeline',
+            },
+            {
+              label: 'Blog',
+              to: '/blog',
             },
           ],
         },

@@ -9,7 +9,7 @@ export default function Links(props) {
 
   const getIcon = (platform) => {
     try {
-      return require(`../../../static/img/nucleo-social-icons/social-1_logo-${platform}.svg`);
+      return require(`@site/static/img/nucleo-social-icons/social-1_logo-${platform}.svg`);
     } catch (err) {
       return null;
     }
