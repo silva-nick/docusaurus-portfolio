@@ -132,6 +132,13 @@ export default async function init(
     throw Error(chalk.red('Failed to update configuration file.'));
   }
 
+  // Update about me page references
+  try {
+    await updateConfig(path.join(siteName, 'docs/about-me.mdx'), username);
+  } catch (err) {
+    throw Error(chalk.red('Failed to update about me file.'));
+  }
+
   console.log();
   console.log(chalk.green('Configuration successful!'));
   console.log('We recommend that you begin by typing:');
