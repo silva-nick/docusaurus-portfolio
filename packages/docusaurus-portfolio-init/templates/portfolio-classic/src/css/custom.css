@@ -15,6 +15,11 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --rand-color-0: #d0f0fd;
+  --rand-color-1: #d1f7c4;
+  --rand-color-2: #cfdfff;
+  --rand-color-3: #e8e8e8;
+  --rand-color-4: #b8e7de;
 }
 
 .docusaurus-highlight-code-line {

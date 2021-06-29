@@ -4,7 +4,7 @@ module.exports = {
   tagline: 'A React-based static github website template.',
   url: 'https://github.com',
   baseUrl: '/',
-  organizationName: '', // Usually your GitHub org/user name.
+  organizationName: '<GITHUB-USERNAME>', // Usually your GitHub org/user name.
   projectName: '', // Usually your repo name.
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -21,7 +21,7 @@ module.exports = {
           type: 'doc',
           docId: 'about-me',
           position: 'left',
-          label: 'More',
+          label: 'More Info',
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
