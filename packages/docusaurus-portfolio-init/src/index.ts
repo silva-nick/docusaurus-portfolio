@@ -96,7 +96,7 @@ export default async function init(
       await fs.rmdir(`${siteName}/blog`, {
         recursive: true,
       });
-      await fs.rmdir(`${siteName}/doc`, {
+      await fs.rmdir(`${siteName}/docs`, {
         recursive: true,
       });
     } catch (error) {
