@@ -20,6 +20,8 @@ npx docusaurus-portfolio-init init
 1.  username: your GitHub username
 1.  template: the template to be used
 
+Using all options, your command might look like: `npx docusaurus-portfolio-init init my-site porfolio-classic my-github`.
+
 Finally, start the project by navigating into the new directory and running.
 
 ```sh
@@ -29,4 +31,20 @@ yarn start
 
 #### Templates
 
-Currently this packages supports one website template, `portfolio-classic`. More templates can be simply be added by adding a template directory in `docusaurus-portfolio-init/templates` and then updating the CLI (`src/index.ts`).
+Currently this packages support two website templates.
+
+**`portfolio-classic`** A robust portfolio website template that includes:
+
+- An introduction page with GitHub user and repository data.
+- An about me section with auto generated social-media icons.
+- A resume template with custom techinical skills pills.
+- A simple timeline page for more detailed personal information.
+- And Full blog support from `docusaurus-blog`.
+
+Check out an example [here](https://github.io/silva-nick/porfolio).
+
+**`authored-classic`** Generates a standard classic themed site using `@docusaurus/init` but adds an additional about me page.
+
+#### Contributing:
+
+More templates can be simply be added by adding a template directory in `docusaurus-portfolio-init/templates` and then updating the CLI (`src/index.ts`).
