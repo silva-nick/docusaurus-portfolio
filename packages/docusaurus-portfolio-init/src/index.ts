@@ -55,19 +55,20 @@ export default async function init(
     throw Error(chalk.red('Installation of plugin failed.'));
   }
 
-    // Prompt if template is not passed from CLI.
-    if (!template) {
-      const prompt = await prompts({
-        type: 'text',
-        name: 'name',
-        message: 'Which template do you want to use (portfolio-classic / authored-classic)?',
-        initial: 'portfolio-classic',
-      });
-      template = prompt.name;
-    }
-    if (!template) {
-      throw Error(chalk.red('A template is required.'));
-    }
+  // Prompt if template is not passed from CLI.
+  if (!template) {
+    const prompt = await prompts({
+      type: 'text',
+      name: 'name',
+      message:
+        'Which template do you want to use (portfolio-classic / authored-classic)?',
+      initial: 'portfolio-classic',
+    });
+    template = prompt.name;
+  }
+  if (!template) {
+    throw Error(chalk.red('A template is required.'));
+  }
 
   // Prompt if usename is not passed from CLI.
   if (!username) {
@@ -86,8 +87,29 @@ export default async function init(
   console.log();
   console.log(chalk.cyan('adding portfolio config...'));
 
+  // Delete default main page for portfolio site.
+  if (template === 'portfolio-classic') {
+    try {
+      await fs.rmdir(`${siteName}/src`, {
+        recursive: true,
+      });
+      await fs.rmdir(`${siteName}/blog`, {
+        recursive: true,
+      });
+      await fs.rmdir(`${siteName}/doc`, {
+        recursive: true,
+      });
+    } catch (error) {
+      console.log(chalk.red('Deleting files failed.'));
+      throw error;
+    }
+  }
+
   // Copy template files to project
-  if (template && template === "portfolio-classic" || template === "authored-classic"){
+  if (
+    (template && template === 'portfolio-classic') ||
+    template === 'authored-classic'
+  ) {
     try {
       await fs.copy(
         path.resolve(__dirname, `../templates/${template}/`),
@@ -100,7 +122,7 @@ export default async function init(
       throw error;
     }
   } else {
-    throw  Error(chalk.red('A valid template is required.'));
+    throw Error(chalk.red('A valid template is required.'));
   }
 
   // Update docusaurus.config.js info.
@@ -108,11 +130,6 @@ export default async function init(
     await updateConfig(path.join(siteName, 'docusaurus.config.js'), username);
   } catch (err) {
     throw Error(chalk.red('Failed to update configuration file.'));
-  }
-  
-  // Delete default main page for portfolio site.
-  if (template==="portfolio-classic") {
-    await fs.unlink(`${siteName}/src/index.js`)
   }
 
   console.log();

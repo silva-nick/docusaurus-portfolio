@@ -17,7 +17,6 @@ module.exports = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: 'me', label: 'About Me', position: 'left' },
         {
           type: 'doc',
           docId: 'intro',
