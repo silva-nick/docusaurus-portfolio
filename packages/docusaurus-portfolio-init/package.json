@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-portfolio-init",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A package to initialize a new docusaurus-portfolio site.",
   "repository": {
     "type": "git",
