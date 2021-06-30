@@ -35,7 +35,10 @@ export default function Timeline(props) {
             <div className={clsx('card card--full-height', styles.cardDirect)}>
               {image && (
                 <div class="card__image">
-                  <img src={`../../../static/img/${image}`} alt={imageAlt} />
+                  <img
+                    src={require(`@site/static/img/${image}`).default}
+                    alt={imageAlt}
+                  />
                 </div>
               )}
               <div className="card__body">

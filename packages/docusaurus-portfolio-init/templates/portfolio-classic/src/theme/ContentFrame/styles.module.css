@@ -1,6 +1,5 @@
 .cardDirect {
   transition: all 0.25s;
-  cursor: pointer;
   transform: translateY(0px);
 }
 
