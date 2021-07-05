@@ -37,9 +37,9 @@ Currently this packages support two website templates.
 
 - An introduction page with GitHub user and repository data.
 - An about me section with auto generated social-media icons.
-- A resume template with custom techinical skills pills.
+- A resume template with custom technical skills pills.
 - A simple timeline page for more detailed personal information.
-- And Full blog support from `docusaurus-blog`.
+- And full blog support from `docusaurus-blog`.
 
 Check out an example [here](https://github.io/silva-nick/porfolio).
 
