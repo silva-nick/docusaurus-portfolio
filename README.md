@@ -4,7 +4,7 @@ A [Docusaurus v2](https://github.com/facebook/docusaurus) plugin that generates 
 
 ---
 
-> More documentation to come
+> For a blog-style introduction to Docusaurus plugin development and `docusaurus-portfolio`, check out [my blog](https://silva-nick.github.io/portfolio/blog/docusaurus-plugins).
 
 ## Introduction
 
@@ -35,15 +35,15 @@ This project uses [Lerna](https://lerna.js.org/) to manage all packages. Each pa
 
 #### [`docusaurus-portfolio-init`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-init)
 
-Docusaurus website generator built off of `@docusaurus/init`. 
+Docusaurus website generator built off of `@docusaurus/init`.
 
 #### [`docusaurus-portfolio-plugin`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-plugin)
 
-Docusaurus portfolio main plugin that manages the GitHub API requests.
+The main Docusaurus portfolio plugin that manages the GitHub API requests.
 
 #### [`docusaurus-portfolio-theme`](https://github.com/silva-nick/docusaurus-portfolio/tree/main/packages/docusaurus-portfolio-theme)
 
-The React.js components that drive `docusaurus-portfolio`. 
+The React.js components that drive `docusaurus-portfolio`.
 
 ## Contributing
 
