@@ -10,6 +10,8 @@ A [Docusaurus v2](https://github.com/facebook/docusaurus) plugin that generates 
 
 `docusaurus-portfolio` is a set of packages designed for Docusaurus that allow users to display a stripped-down version of their Github page on their documentation website. It also includes includes an initialization script that generates a full portfolio website with an about me, resume page, timeline, and blog.
 
+Check out my site for an example: https://silva-nick.github.io/portfolio/
+
 ![image](https://user-images.githubusercontent.com/39960606/123738850-39ef0c80-d86b-11eb-8be7-6e6dcd473dd6.png)
 
 ## Usage

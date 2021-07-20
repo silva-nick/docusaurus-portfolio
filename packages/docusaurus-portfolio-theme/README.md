@@ -20,17 +20,15 @@ To configure the plugin, add or update your configuration options in `docusaurus
     themes: ['docusaurus-portfolio-theme', ...],
 ```
 
-**Notice:** A lot of this code should be refactored to work better with Infima styling. Also, this package can and should be combined with the plugin.
-
 #### Components:
 
 **`ContentFrame`**
 
-This component renders at the top of the GitHub repository section of the about me page. It is by default **unimplemented**. This component is meant to be a holder for a user designed images, three.js renderings, or more information sections. To customize this component, run `yarn swizzle ContentFrame --force`. For an example of a custom content frame, refer to `/packages/docusaurus-portfolio-init/templates/portfolio-classic`.
+This component renders at the top of the GitHub repository section of the about me page. It is by default **unimplemented**. This component is meant to be a holder for a user designed images, three.js renderings, or more information sections. To customize this component, run `yarn swizzle ContentFrame --force`. For an example of a custom content frame, refer to [`/packages/docusaurus-portfolio-init/templates/portfolio-classic`](../docusaurus-portfolio-init/templates/portfolio-classic).
 
 **`Links`**
 
-The link component generates a container full of links to a user's social media accounts. All links must be in the form `https://<platform>.*/*`. Platform logos are available in `static/img/nucleo-social-icons`. For an example of a this component being used, refer to `/packages/docusaurus-portfolio-init/templates/docs/about`.
+The link component generates a container full of links to a user's social media accounts. All links must be in the form `https://<platform>.*/*`. Platform logos are available in `static/img/nucleo-social-icons`. For an example of a this component being used, refer to [`/packages/docusaurus-portfolio-init/templates/portfolio-classic/docs/about`](../docusaurus-portfolio-init/templates/portfolio-classic/docs/about).
 
 **`PortfolioPage`**
 
@@ -42,11 +40,11 @@ Infima-based card that holds the information for a single repository. To customi
 
 **`Skills`**
 
-Technical skills pills for resume websites. Skills must be passed to the component props as a list of strings. For an example of this component being used, refer to `/packages/docusaurus-portfolio-init/templates/docs/resume`.
+Technical skills pills for resume websites. Skills must be passed to the component props as a list of strings. For an example of this component being used, refer to [`/packages/docusaurus-portfolio-init/templates/portfolio-classic/docs/resume`](../docusaurus-portfolio-init/templates/portfolio-classic/docs/resume).
 
 **`Timeline`**
 
-User information timeline for personal or project websites. This component renders a list of cards that form a timeline. For an example of this component being used, refer to `/packages/docusaurus-portfolio-init/templates/docs/timeline`.
+User information timeline for personal or project websites. This component renders a list of cards that form a timeline. For an example of this component being used, refer to [`/packages/docusaurus-portfolio-init/templates/portfolio-classic/docs/timeline`](../docusaurus-portfolio-init/templates/portfolio-classic/docs/timeline).
 
 **`TrophyOverlay`**
 
